@@ -1,0 +1,77 @@
+/* Body styling */
+
+body {
+  width: 100%;
+  height: 400px;
+  background-size: 100%;
+  background-image: url(todolist.png);
+}
+
+/* h1 styling */
+
+h1 {
+  text-align: center;
+  font-family: 'Changa One', sans-serif;
+  font-size: 4.0em;
+  font-weight: normal;
+  line-height: 0.8em;
+  font-style: bolder;
+  color: blue;
+  text-shadow: 1px 1px 2px white;
+  font-weight: bolder;
+  text-align: center;
+}
+
+h3{
+  text-align: center;
+  font-family: 'Changa One', sans-serif;
+  font-size: 2.0em;
+  font-weight: normal;
+  line-height: 0.8em;
+  font-style: bolder;
+  color: blue;
+  text-shadow: 1px 1px 2px white;
+  font-weight: bolder;
+  text-align: center;
+}
+
+/* Priority list background coloring*/
+
+.High {
+  background-color: #DB7093;
+}
+
+.Medium {
+  background-color: #E9967A;
+}
+
+.Low {
+  background-color: #B0E0E6;
+}
+
+/* text styling for the todo list*/
+
+#textOutput {
+  text-align: left;
+}
+
+/* Positioning and styling for the text input of the to-do list */
+#inputGrid {
+  margin: 3% 0 0 45%;
+}
+
+/* Positioning and styling for the three priorty buttons */
+#buttons {
+  text-align: right;
+  margin: 3% 0 0 0;
+}
+
+#todoLabel {
+font-style: bold;
+font-size: 1.25em;
+}
+
+#priorityLabel{
+  font-style: bold;
+  font-size: 1.25em;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Todo List</title>
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/app/styles/styles.css">
+  <!-- endinject -->
+</head>
+
+<!--calling the controller-->
+
+<body ng-controller="TodoListController as vm">
+  <h1> Very Simple To-Do List </h1>
+  <h3> Full Stack Application </h3>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 control-label" id="inputListSection">
+       
+
+            <!--Input text for to do list-->
+            <div id="inputGrid">
+              <label id="todoLabel">To do List Items:</label>
+              <input type="text" class="form-control" ng-model="vm.toDoObject.TodoInput" placeholder="Add New To-Do">
+
+              <!--dropdown for priority setting-->
+              <div class="form-group">
+                <label id="priorityLabel">Priority:</label>
+                <select ng-model="vm.toDoObject.PriorityLevel">
+            <option value="1">High</option>
+            <option value="2">Medium</option>
+            <option value="3">Low</option>
+            </select>
+              </div>
+
+              <!--Submit Todo List Button-->
+              <input type="submit" ng-click="vm.submit(vm.toDoObject)" id="submitList" value="Submit List" />
+            </div>
+          </div>
+       
+
+
+
+      <!--Priority Buttons -->
+      <div id="buttons">
+        <div class="col-xs-12 col-md-6 control-label">
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button ng-click="sortField = 'priority'" type="button" class="btn btn-danger">Highest Priority</button>
+            <button ng-click="sortField = '-priority'" type="button" class="btn btn-primary">Lowest Priority</button>
+            <button ng-click="sortField = '-list'" type="button" class="btn btn-success">Alphabetical</button>
+
+            <!--Sorting the various features of each button-->
+            <div id="textOutput" <li ng-repeat="list in vm.list | orderBy: sortField" ng-bind="::vm.toDoObject.TodoInput" ng-class="::{'Low': vm.toDoObject.PriorityLevel==3, 'Medium': vm.toDoObject.PriorityLevel==2, 'High': vm.toDoObject.PriorityLevel==1}">
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- bower:js -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- endbower -->
+
+  <!-- inject:js -->
+  <script src="/app/app.js"></script>
+  <script src="/app/core/VSTDA.Factory.js"></script>
+  <script src="/app/mainController/VSTDA.Controller.js"></script>
+  <!-- endinject -->
+</body>
+
+</html>

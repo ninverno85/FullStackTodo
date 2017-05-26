@@ -1,0 +1,23 @@
+{
+  "name": "VSTDA",
+  "homepage": "https://github.com/ninverno85/GulpAutomation.git",
+  "description": "Todo List Full Stack",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "font-awesome": "^4.7.0",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  },
+  "authors": [
+    "ninverno85 <nicholas.inverno@gmail.com>"
+  ]
+}
